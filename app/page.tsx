@@ -30,9 +30,7 @@ export default function Page() {
             Begin your child&apos;s Atlas journey
           </h1>
           <p className="mx-auto mt-4 max-w-md text-pretty leading-relaxed text-primary-foreground/85">
-            Founding intake now open for Grade 1 &amp; 2. Tell us about your
-            family and we&apos;ll personally guide you through fees, curriculum,
-            and admissions.
+            Founding intake now open for Grade 1 &amp; 2.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4">
             {stats.map(({ value, label }) => (
@@ -51,11 +49,8 @@ export default function Page() {
       <section className="mx-auto -mt-8 max-w-2xl px-5 pb-16">
         <div className="rounded-2xl border border-border bg-card p-6 shadow-lg sm:p-9">
           <div className="border-b border-border pb-5">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-              Enquiry Form
-            </p>
             <h2 className="mt-1 font-heading text-2xl font-bold text-primary">
-              Tell us about your family
+              Enquiry form
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
               All fields marked with * are required.

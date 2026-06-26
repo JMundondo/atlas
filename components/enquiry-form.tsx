@@ -25,11 +25,10 @@ const factorOptions = [
 
 const referralOptions = [
   "Word of mouth",
-  "Facebook / Instagram",
-  "WhatsApp",
+  "Facebook / Instagram / WhatsApp",
   "Google search",
   "Flyer / Print",
-  "Event",
+  "Event / Activation",
   "Other",
 ]
 
@@ -166,17 +165,6 @@ function EnquiryFormContent({
               className={fieldClass}
             />
           </div>
-          <div className="space-y-2">
-            <label htmlFor="startDate" className={labelClass}>
-              Intended start date
-            </label>
-            <input
-              id="startDate"
-              name="startDate"
-              type="date"
-              className={fieldClass}
-            />
-          </div>
         </div>
 
         <fieldset className="space-y-3">
@@ -238,10 +226,10 @@ function EnquiryFormContent({
 
       <hr className="border-border" />
 
-      {/* Marketing insight */}
+      {/* Insight */}
       <div className="space-y-5">
         <div>
-          <SectionLabel>Marketing insight</SectionLabel>
+          <SectionLabel>Insight</SectionLabel>
           <p className="mt-1 text-sm text-muted-foreground">
             Optional — this helps us understand what matters most to your
             family.

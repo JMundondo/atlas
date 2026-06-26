@@ -4,7 +4,6 @@ CREATE TABLE IF NOT EXISTS enrolment_enquiries (
   mobile VARCHAR(50) NOT NULL,
   email VARCHAR(150) NOT NULL,
   child_age VARCHAR(50) NULL,
-  intended_start_date VARCHAR(100) NULL,
   wants_tour VARCHAR(10) NULL,
   interests JSON NOT NULL,
   other_interest VARCHAR(255) NULL,
