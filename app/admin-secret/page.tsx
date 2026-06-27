@@ -42,6 +42,7 @@ export default async function AdminSecretPage() {
                   <th className="px-4 py-3 font-semibold">Contact</th>
                   <th className="px-4 py-3 font-semibold">Child&apos;s age</th>
                   <th className="px-4 py-3 font-semibold">Tour</th>
+                  <th className="px-4 py-3 font-semibold">Prospectus Meeting</th>
                   <th className="px-4 py-3 font-semibold">Interests</th>
                   <th className="px-4 py-3 font-semibold">Decision factors</th>
                   <th className="px-4 py-3 font-semibold">Referral source</th>
@@ -53,7 +54,7 @@ export default async function AdminSecretPage() {
                 {enquiries.length === 0 ? (
                   <tr>
                     <td
-                      colSpan={10}
+                      colSpan={11}
                       className="px-4 py-8 text-center text-muted-foreground"
                     >
                       No enquiries have been submitted yet.
@@ -80,6 +81,9 @@ export default async function AdminSecretPage() {
                       </td>
                       <td className="px-4 py-3 text-muted-foreground">
                         {enquiry.tour || "—"}
+                      </td>
+                      <td className="px-4 py-3 text-muted-foreground">
+                        {enquiry.prospectusMeeting || "—"}
                       </td>
                       <td className="px-4 py-3 text-muted-foreground">
                         {formatList(enquiry.interests)}

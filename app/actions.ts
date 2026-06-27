@@ -37,6 +37,7 @@ export async function submitEnquiry(
     email,
     childAge: String(formData.get("childAge") ?? "").trim(),
     tour: String(formData.get("tour") ?? "").trim(),
+    prospectusMeeting: String(formData.get("prospectusMeeting") ?? "").trim(),
     interests: formData.getAll("interests").map(String),
     otherInterest: String(formData.get("otherInterest") ?? "").trim(),
     decisionFactors: formData.getAll("decisionFactors").map(String),

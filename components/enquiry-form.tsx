@@ -188,6 +188,28 @@ function EnquiryFormContent({
             ))}
           </div>
         </fieldset>
+
+        <fieldset className="space-y-3">
+          <legend className={labelClass}>
+            Would you like to attend prospectus meeting in August?
+          </legend>
+          <div className="flex gap-3">
+            {["Yes", "No"].map((opt) => (
+              <label
+                key={opt}
+                className="flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-md border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition hover:border-accent has-[:checked]:border-accent has-[:checked]:bg-accent/10 has-[:checked]:text-accent sm:flex-none sm:px-8"
+              >
+                <input
+                  type="radio"
+                  name="prospectusMeeting"
+                  value={opt}
+                  className="h-4 w-4 accent-[var(--accent)]"
+                />
+                {opt}
+              </label>
+            ))}
+          </div>
+        </fieldset>
       </div>
 
       <hr className="border-border" />

@@ -26,6 +26,7 @@ export type EnquiryInsert = {
   email: string
   childAge: string
   tour: string
+  prospectusMeeting: string
   interests: string[]
   otherInterest: string
   decisionFactors: string[]
@@ -40,6 +41,7 @@ type EnquiryRow = {
   email: string
   child_age: string | null
   wants_tour: string | null
+  wants_prospectus_meeting: string | null
   interests: string
   other_interest: string | null
   decision_factors: string
@@ -55,6 +57,7 @@ export type EnquiryRecord = {
   email: string
   childAge: string
   tour: string
+  prospectusMeeting: string
   interests: string[]
   otherInterest: string
   decisionFactors: string[]
@@ -151,18 +154,20 @@ export async function saveEnquiry(enquiry: EnquiryInsert) {
       email,
       child_age,
       wants_tour,
+      wants_prospectus_meeting,
       interests,
       other_interest,
       decision_factors,
       referral_source,
       consent_given
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       enquiry.parentName,
       enquiry.mobile,
       enquiry.email,
       enquiry.childAge || null,
       enquiry.tour || null,
+      enquiry.prospectusMeeting || null,
       JSON.stringify(enquiry.interests),
       enquiry.otherInterest || null,
       JSON.stringify(enquiry.decisionFactors),
@@ -182,6 +187,7 @@ export async function listEnquiries(): Promise<EnquiryRecord[]> {
       email,
       child_age,
       wants_tour,
+      wants_prospectus_meeting,
       interests,
       other_interest,
       decision_factors,
@@ -200,6 +206,7 @@ export async function listEnquiries(): Promise<EnquiryRecord[]> {
     email: row.email,
     childAge: row.child_age ?? "",
     tour: row.wants_tour ?? "",
+    prospectusMeeting: row.wants_prospectus_meeting ?? "",
     interests: parseJsonArray(row.interests),
     otherInterest: row.other_interest ?? "",
     decisionFactors: parseJsonArray(row.decision_factors),
